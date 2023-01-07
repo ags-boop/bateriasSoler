@@ -1,0 +1,14 @@
+{
+    "baterias":[{
+        "imagen":"../responsive-real-state-website-main/assets/img/home-battery.png",
+        "titulo":"A",
+        "descripcion":"aa",
+        "precio":"600"
+    },
+    {
+        "imagen":"../responsive-real-state-website-main/assets/img/home-battery.png",
+        "titulo":"A",
+        "descripcion":"aa",
+        "precio":"600"
+    }]
+}

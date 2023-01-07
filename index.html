@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="" type="image/x-icon">
+
+        <!--=============== BOXICONS ===============-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        
+        <!--=============== SWIPER CSS ===============-->
+        <link
+        rel="stylesheet"
+        href="assets/css/swiper-bundle.min.css"
+        />
+      
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Baterias Soler</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    Baterias Soler <i class='bx bxs-home-alt-2'></i>
+                </a>
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i class='bx bx-home-alt-2'></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="#popular" class="nav__link">
+                                <i class='bx bx-store'></i>
+                                <span>Productos</span>
+                            </a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="#value" class="nav__link">
+                                <i class='bx bx-user'></i>
+                                <span>Nosotros</span>
+                            </a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">
+                                <i class='bx bx-info-circle'></i>
+                                <span>Info</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <a href="#" class="button nav__button" onclick="location.href='productos.html'">
+                    Ver Productos
+                </a>
+            </nav>
+        </header>
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home section" id="home">
+                <div class="home__container container grid">
+                    <div class="home__data">
+                        <h1 class="home__title">
+                            Baterias Soler
+                        </h1>
+                        <p class="home__description">
+                            Somos una empresa con 7 años en el rubro brindamos seguridad y confianza respaldada por nuestros clientes. Somos distribuidores de Moura y Heliar.
+                        </p>
+                        <!-- maybeinputsearch -->
+
+                        <div class="home__value">
+                            <div>
+                                <h1 class="home__value-number">
+                                    9k <span>+</span>
+                                </h1>
+                                <span class="home__value-description">
+                                    Productos <br> Vendidos
+                                </span>
+                            </div>
+
+                            <div>
+                                <h1 class="home__value-number">
+                                    9k <span>+</span>
+                                </h1>
+                                <span class="home__value-description">
+                                    Clientes <br> Felices
+                                </span>
+                            </div>
+
+                            <div>
+                                <h1 class="home__value-number">
+                                    2 <span></span>
+                                </h1>
+                                <span class="home__value-description">
+                                    Sucursales <br> Premium
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home__images">
+                        <div class="home__orbe">
+                            <div class="home__img">
+                                <img src="assets/img/home.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== LOGOS ====================-->
+            <section class="logos section">
+                <div class="logos__container container grid">
+                    <div class="logos__img">
+                        <img src="assets/img/descarga.png" alt="">
+                    </div>
+                    
+                    <div class="logos__img">
+                        <img src="assets/img/willard.png" alt="">
+                    </div>
+                    
+                    <div class="logos__img">
+                        <img src="assets/img/descarga.png" alt="">
+                    </div>
+                    
+                    <div class="logos__img">
+                        <img src="assets/img/willard.png" alt="">
+                    </div>
+                
+                </div>
+            </section>
+
+            <!--==================== POPULAR ====================-->
+            <section class="popular section" id="popular">
+                <div class="container">
+                    <span class="section__subtitle">
+                        Nuestra Seccion
+                    </span>
+                    <h2 class="section__title">
+                        Popular
+                    </h2>
+
+                    <div class="popular__container swiper">
+                        <div class="swiper-wrapper" id="divinsert">
+                           <!-- GET DATA BY SERVICE -->
+                        </div>
+                        <div class="swiper-button-next">
+                            <i class='bx bx-chevron-right'></i>
+                        </div>
+                        <div class="swiper-button-prev">
+                            <i class='bx bx-chevron-left'></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!--==================== VALUE ====================-->
+            <section class="value section" id="value">
+                <div class="value__container container grid">
+                    <div class="value__images">
+                        <div class="value__orbe"></div>
+                        <div class="value__img">
+                            <img src="assets/img/logo-2022033015212388500 (1).png" alt="">
+                        </div>
+                    </div>
+                        <div class="value__content">
+                            <div class="value__data">
+                                <span class="section__subtitle">
+                                    Nuestro valor
+                                </span>
+                                <h2 class="section__title">
+                                    Ques lo que nos destaca?
+                                </h2>
+                                <p class="value__description">
+                                    Rapidez, Confiabilidad, Amabilidad, Calidad
+                                </p>
+                            </div>
+                            <div class="value__accordion">
+                                <div class="value__accordion-item">
+                                    <header class="value__accordion-header">
+                                        <i class='bx bxs-shield-x value__accordion-icon' ></i>
+                                    <h3 class="value__accordion-title">
+                                        Rapidez
+                                    </h3>
+                                    <div class="value__accordion-arrow">
+                                        <i class='bx bxs-down-arrow' ></i>
+                                    </div>
+                                </header>
+                                <div class="value__accordion-content">
+                                    <p class="value__accordion-description">
+                                        En Baterias Soler buscamos ser parte de la cadena que impulsa a los argentinos, 
+                                        brindando nuestros servicios de asistencia a tu puerta con maxima coordinación.
+
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="value__accordion-item">
+                                <header class="value__accordion-header">
+                                    <i class='bx bxs-shield-x value__accordion-icon' ></i>
+                                    <h3 class="value__accordion-title">
+                                        Confiablidad
+                                    </h3>
+                                    <div class="value__accordion-arrow">
+                                        <i class='bx bxs-down-arrow' ></i>
+                                    </div>
+                                </header>
+                                <div class="value__accordion-content">
+                                    <p class="value__accordion-description">
+                                        Contamos con casi diez años de experiencia en el rubro, proponiendo para cada vehículo el producto correspondiente, 
+                                        cerciorando así, un producto y servicio exclusivo para nuestros clientes, cuidando su bolsillo y asegurando calidad.
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="value__accordion-item">
+                                <header class="value__accordion-header">
+                                    <i class='bx bxs-x-square value__accordion-icon'></i>
+                                    <h3 class="value__accordion-title">
+                                        Amabilidad
+                                    </h3>
+                                    <div class="value__accordion-arrow">
+                                        <i class='bx bxs-down-arrow' ></i>
+                                    </div>
+                                </header>
+                                <div class="value__accordion-content">
+                                    <p class="value__accordion-description">
+                                        Atendemos la estructura de nuestra empresa, fomentamos valores y confianza 
+                                        con nuestros clientes y dentro de nuestro equipo. 
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="value__accordion-item">
+                                <header class="value__accordion-header">
+                                    <i class='bx bxs-bar-chart-square value__accordion-icon' ></i>
+                                    <h3 class="value__accordion-title">
+                                        Calidad
+                                    </h3>
+                                    <div class="value__accordion-arrow">
+                                        <i class='bx bxs-down-arrow' ></i>
+                                    </div>
+                                </header>
+                                <div class="value__accordion-content">
+                                    <p class="value__accordion-description">
+                                        Creemos en la importancia que tiene un vehiculo en tu vida, poreso ofrecemos los mejores productos y un 
+                                        servicio que mejora dia a dia, brindando una experiencia personalizada para cada uno de ustedes.
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== CONTACT ====================-->
+            <section class="contact section" id="contact">
+                <div class="contact_container container grid">
+                    <div class="contact__images">
+                        <div class="contact__orber"></div>
+
+                        <div class="contact__img">
+                            <img src="assets/img/logo-2022033015212388500 (1).png" alt="">
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="contact__content">
+                        <div class="contact__data">
+                            <span class="section__subtitle">Contactanos</span>
+                            <h2 class="section__title">
+                                Por donde nos podes encontrar?<span>.</span>
+                            </h2>
+                            <p class="contact__description">Te facilitamos los siguentes lugares para que puedas contactarte con nosotros</p>
+                        </div>
+
+                        <div class="contact__card">
+                            <div class="contact__card-box">
+                                <div class="contact__card-info">
+                                    <i class='bx bxs-phone-call'></i>
+                                    <div>
+                                        <h3 class="contact__card-title">
+                                            Llamada
+                                        </h3>
+                                        <p class="contact__card-description">
+                                            Apreta "Llamar" y contactate con nosotros
+                                        </p>
+                                    </div>
+                                </div>
+                                <a href="javascript:ventanaSecundaria('https://api.whatsapp.com/send?phone=01169767795&text=Hola!%20Te%20consulto%20por%20una%20bateria?')">
+                                    <button class="button contact__card-button">Llamar</button>
+                                </a>
+                            </div>
+
+                            <div class="contact__card-box">
+                                <div class="contact__card-info">
+                                    <i class='bx bx-chat' ></i>
+                                    <div>
+                                        <h3 class="contact__card-title">
+                                            Mensaje
+                                        </h3>
+                                        <p class="contact__card-description">
+                                            Apreta "Mensaje" y contactate con nosotros
+                                        </p>
+                                    </div>
+                                </div>
+                                <a href="javascript:ventanaSecundaria('https://api.whatsapp.com/send?phone=01169767795&text=Hola!%20Te%20consulto%20por%20una%20bateria?')">
+                                    <button class="button contact__card-button">Mensaje</button>
+                                </a>                            
+                            </div>
+
+
+                    
+
+                            <div class="contact__card-box">
+                                <div class="contact__card-info">
+                                    <i class='bx bxs-directions' ></i>
+                                    <div>
+                                        <h3 class="contact__card-title">
+                                           Veni a visitarnos
+                                        </h3>
+                                        <p class="contact__card-description">
+                                            Si apretas "Ir" te decimos donde estamos.
+                                        </p>
+                                    </div>
+                                </div>
+                                <a href="javascript:ventanaSecundaria('https://goo.gl/maps/z7NM63jnkMYsJvms9')">
+                                    <button class="button contact__card-button">Ir</button>
+                                </a>                             
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== SUBSCRIBE ====================-->
+            <section class="subscribe section">
+                <div class="subscribe__container container">
+                    <h1 class="subscribe__title">
+                        Queres conocer todo nuestro catalogo de baterias?
+                    </h1>
+                    <p class="subscribe__description">
+                        No pierdas mas tiempo, aca tenes todo lo que buscas
+                    </p>
+                    <a class="button subscribe__button" onclick="location.href='productos.html'">
+                        Ver Productos
+                    </a>
+
+                </div>
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <a href="" class="footer__logo">
+                    Baterias Soler <i class="bx bxs-home-alt-2"></i>
+                </a>
+                <p></p>
+                <div class="footer__content">
+                    <div class="">
+                        <h3 class="footer__title">
+                            Siempre
+                        </h3>
+                        <ul class="footer__links">
+                            <!-- <a href="" class="footer__link">Sobre nosotros</a> -->
+                        </ul>
+                        
+                        <ul class="footer__links">
+                            <!-- <a href="" class="footer__link">News</a> -->
+                        </ul>
+                        
+                        <ul class="footer__links">
+                            <a href="" class="footer__link"></a>
+                        </ul>
+                    
+                    </div>
+
+                    <div class="">
+                        <h3 class="footer__title">
+                            Presente
+                        </h3>
+                        <ul class="footer__links">
+                            <!-- <a href="" class="footer__link">Sobre nosotros</a> -->
+                        </ul>
+                        
+                        <ul class="footer__links">
+                            <!-- <a href="" class="footer__link">News</a> -->
+                        </ul>
+                        
+                        <ul class="footer__links">
+                            <a href="" class="footer__link"></a>
+                        </ul>
+                    
+                    </div>
+                    
+                    <div class="">
+                        <h3 class="footer__title">
+                            Con ustedes <span>.</span>
+                        </h3>
+                        <ul class="footer__links">
+                            <!-- <a href="" class="footer__link">Sobre nosotros</a> -->
+                        </ul>
+                        
+                        <ul class="footer__links">
+                            <!-- <a href="" class="footer__link">News</a> -->
+                        </ul>
+                        
+                        <ul class="footer__links">
+                            <!-- <a href="" class="footer__link">News</a> -->
+                        </ul>
+                        
+                    </div>
+                    
+                    <div class="">
+                        <h3 class="footer__title">
+                            Seguinos !
+                        </h3>
+                        <ul class="footer__social">
+                            <a href="" class="footer__social-link">
+                                <i class='bx bxl-facebook'></i>
+                            </a>
+                            <a href="" class="footer__social-link">
+                                <i class='bx bxl-instagram-alt'></i>
+                            </a>
+                            <a href="" class="footer__social-link">
+                                <i class='bx bxl-whatsapp'></i>
+                            </a>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__info container">
+                <span class="footer__copy">
+                    &#169; Todos los derechos reservados
+                </span>
+                <div class="footer__privacy">
+                    <a href="#">Terminos y condiciones</a>
+                    <a href="#">Politica de privacidad</a>
+                </div>
+            </div>
+        </footer>
+            
+            
+            <!--========== SCROLL UP ==========-->
+        <a href="" class="scrollup" id="scroll-up">
+            <i class='bx bx-chevrons-up' ></i>
+        </a>
+            
+        <!--=============== SCROLLREVEAL ===============-->
+        <script src=""></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
