@@ -50,7 +50,7 @@ obtenerJSON("https://api.jsonbin.io/v3/b/63b9717215ab31599e2fd923")
                 </div>
                 </div>
                 <div class="mx-3 mt-3 mb-2">
-                  <a href="javascript:ventanaSecundaria('https://api.whatsapp.com/send?phone=+5491169767795&text=Hola!%20Te%20consulto%20por%20una%20bateria?%20seria%20la%20${propierties.descripcion}')">
+                  <a href="javascript:ventanaSecundaria('https://api.whatsapp.com/send?phone=+5491168034340&text=Hola!%20Te%20consulto%20por%20una%20bateria?%20seria%20la%20${propierties.descripcion}')">
                     <button type="button" class="btn btn-danger btn-block"><small>CONTACTAR</small></button>
                   </a>
                 </div>
