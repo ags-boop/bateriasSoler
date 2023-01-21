@@ -134,4 +134,3 @@ function ventanaSecundaria(URL) {
   window.open(URL)
 }
 
-
