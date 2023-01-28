@@ -96,12 +96,18 @@ small.justify-content-center{
 }
 
 .featured__item{
-	width: 90px;
+	/* width: 90px; */
 	height: 90px;
 	border: none;
 	outline: none;
-	padding: .75rem;
+	/* padding: .75rem; */
 	border-radius: .75rem;
 	cursor: pointer;
 	transition: .3s;
+}
+#titulo{
+   padding: 0.4rem;
+   width: 100%;
+   display: flex;
+   justify-content: center;
 }

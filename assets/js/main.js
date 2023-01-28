@@ -21,6 +21,7 @@ var swiper = new Swiper(".popular__container", {
     prevEl: ".swiper-button-prev",
   },
 });
+
 /*=============== VALUE ACCORDION ===============*/
 const accordionItems = document.querySelectorAll('.value__accordion-item')
 
@@ -83,6 +84,10 @@ window.addEventListener('scroll', scrollUp)
 /*=============== GET DATA BY JSON ===============*/
 
 var divinsert = document.getElementById('divinsert')
+var iDivInsertComentariosPrevio = document.getElementById('iDivInsertComentariosPrevio')
+var iDivInsertComentarioActual = document.getElementById('iDivInsertComentarioActual')
+var iDivInsertComentarioSiguiente = document.getElementById('iDivInsertComentarioSiguiente')
+var idivComentarioGlobal = document.getElementById('global')
 
 function obtenerJSON(url) {
   return new Promise((resolve, reject) => {
@@ -101,7 +106,10 @@ function obtenerJSON(url) {
   });
 }
 
+
+
 var html = ""
+
 obtenerJSON("https://api.jsonbin.io/v3/b/6391fd7c6a51bc4f704a819b")
   .then((json) => {
     //console.log("el json de respuesta es:", json.record.baterias);
@@ -134,3 +142,155 @@ function ventanaSecundaria(URL) {
   window.open(URL)
 }
 
+
+var htmlComentariosPrevio = ""
+var htmlComentariosActual = ""
+var htmlComentariosSiguiente = ""
+
+function llenarHTMLComentariosActual(htmlAInsertar, json,) {
+  htmlAInsertar = ""
+  for (let propierties of json) {
+        switch (propierties.tipocomentario){
+        case "actual":
+          htmlAInsertar += `
+              <div class="card border-0 py-3 px-4">
+                <div class="row justify-content-center">
+                  <img src="${propierties.imagen}" class="img-fluid profile-pic mb-4 mt-3">
+                </div>
+              <h6 class="mb-3 mt-2">${propierties.nombre}</h6>
+              <p class="content mb-5 mx-2">"${propierties.comentario}"</p>
+              </div>
+            `
+            break
+      }
+  }
+  return htmlAInsertar
+}
+
+function llenarHTMLComentariosSiguiente(htmlAInsertar, json) {
+  htmlAInsertar = ""
+  for (let propierties of json) {
+    switch (propierties.tipocomentario){
+      case "siguiente":
+        htmlAInsertar += `
+            <div class="card border-0 py-3 px-4">
+              <div class="row justify-content-center">
+                <img src="${propierties.imagen}" class="img-fluid profile-pic mb-4 mt-3">
+              </div>
+            <h6 class="mb-3 mt-2">${propierties.nombre}</h6>
+            <p class="content mb-5 mx-2">"${propierties.comentario}"</p>
+            </div>
+          `
+          break
+    }
+  }
+  return htmlAInsertar
+}
+
+function llenarHTMLComentariosPrevio(htmlAInsertar, json,) {
+  htmlAInsertar = ""
+  for (let propierties of json) {
+    switch (propierties.tipocomentario){
+      case "previo":
+        htmlAInsertar += `
+           <div class="card border-0 py-3 px-4">
+              <div class="row justify-content-center">
+                <img src="${propierties.imagen}" class="img-fluid profile-pic mb-4 mt-3">
+              </div>
+            <h6 class="mb-3 mt-2">${propierties.nombre}</h6>
+            <p class="content mb-5 mx-2">"${propierties.comentario}"</p>
+            </div>
+          `
+          break
+    }
+
+  }
+  return htmlAInsertar
+}
+
+
+
+obtenerJSON("https://api.jsonbin.io/v3/b/63d571faebd26539d06a4b5f")
+  .then((json) => {
+    //console.log("el json de respuesta es:", json.record.baterias);
+    var arrayFilter = json.record.comentarios
+    console.log(arrayFilter)
+    htmlComentariosPrevio = llenarHTMLComentariosPrevio(htmlComentariosPrevio, arrayFilter)
+    htmlComentariosActual = llenarHTMLComentariosActual(htmlComentariosActual,arrayFilter)
+    htmlComentariosSiguiente =  llenarHTMLComentariosSiguiente(htmlComentariosSiguiente,arrayFilter)
+
+    // console.log(htmlComentarios)
+    iDivInsertComentariosPrevio.innerHTML = htmlComentariosPrevio
+    iDivInsertComentarioActual.innerHTML = htmlComentariosActual
+    iDivInsertComentarioSiguiente.innerHTML = htmlComentariosSiguiente
+  })
+  .catch((err) => {
+    console.log("Error encontrado:", err);
+  });
+
+
+  $(document).ready(function () {
+
+    $('.owl-carousel').owlCarousel({
+      mouseDrag: false,
+      loop: true,
+      margin: 2,
+      nav: true,
+      margin:10,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 1
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+  
+    $('.owl-prev').click(function () {
+      $active = $('.owl-item .item.show');
+      $('.owl-item .item.show').removeClass('show');
+      $('.owl-item .item').removeClass('next');
+      $('.owl-item .item').removeClass('prev');
+      $active.addClass('next');
+      if ($active.is('.first')) {
+        $('.owl-item .last').addClass('show');
+        $('.first').addClass('next');
+        $('.owl-item .last').parent().prev().children('.item').addClass('prev');
+      }
+      else {
+        $active.parent().prev().children('.item').addClass('show');
+        if ($active.parent().prev().children('.item').is('.first')) {
+          $('.owl-item .last').addClass('prev');
+        }
+        else {
+          $('.owl-item .show').parent().prev().children('.item').addClass('prev');
+        }
+      }
+    });
+  
+    $('.owl-next').click(function () {
+      $active = $('.owl-item .item.show');
+      $('.owl-item .item.show').removeClass('show');
+      $('.owl-item .item').removeClass('next');
+      $('.owl-item .item').removeClass('prev');
+      $active.addClass('prev');
+      if ($active.is('.last')) {
+        $('.owl-item .first').addClass('show');
+        $('.owl-item .first').parent().next().children('.item').addClass('prev');
+      }
+      else {
+        $active.parent().next().children('.item').addClass('show');
+        if ($active.parent().next().children('.item').is('.last')) {
+          $('.owl-item .first').addClass('next');
+        }
+        else {
+          $('.owl-item .show').parent().next().children('.item').addClass('next');
+        }
+      }
+    });
+  
+  });

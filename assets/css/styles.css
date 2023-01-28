@@ -1224,4 +1224,154 @@ button {
       line-height: 56px;
 }
 }
+.wrapper{
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .box{
+  background: #fff;
+  width: calc(33% - 10px);
+  padding: 25px;
+  border-radius: 3px;
+  box-shadow: 0px 4px 8px rgba(255,0,0,0.55);
+}
+.wrapper .box i.quote{
+  font-size: 20px;
+  color: #E0344B;
+}
+.wrapper .box .content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.box .info .name{
+  font-weight: 600;
+  font-size: 17px;
+}
+.box .info .job{
+  font-size: 16px;
+  font-weight: 500;
+  color: #E0344B;
+}
+.box .info .stars{
+  margin-top: 2px;
+}
+.box .info .stars i{
+  color: #E0344B;
+}
+.box .content .image{
+  height: 75px;
+  width: 75px;
+  padding: 3px;
+  background: #E0344B;
+  border-radius: 50%;
+}
+.content .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.box:hover .content .image img{
+  border-color: #fff;
+}
+@media (max-width: 1045px) {
+  .wrapper .box{
+    width: calc(50% - 10px);
+    margin: 10px 0;
+  }
+}
+@media (max-width: 702px) {
+  .wrapper .box{
+    width: 100%;
+  }
+}
+#titulo{
+  padding: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
+.card {
+  box-shadow: 0px 4px 8px 0px #BDBDBD;
+}
+
+.profile-pic {
+  width: 100px !important;
+  height: 100px;
+  box-shadow: 0px 4px 8px 0px #BDBDBD;
+}
+
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+  background: 0 0;
+  color: #E0344B !important;
+  border: none;
+  padding: 5px 20px !important;
+  font: inherit;
+  font-size: 50px !important;
+}
+
+.owl-carousel .owl-nav button.owl-next:hover, .owl-carousel .owl-nav button.owl-prev:hover {
+  color: #E0344B !important;
+  background-color: transparent !important;
+}
+
+.owl-dots {
+  display: none; 
+}
+
+button:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline-width: 0;
+}
+
+.item {
+  display: none;
+}
+
+.next {
+  display: block !important;
+  position: relative;
+  transform: scale(0.8);
+  transition-duration: 0.3s;
+  opacity: 0.6;
+}
+
+.prev {
+  display: block !important;
+  position: relative;
+  transform: scale(0.8);
+  transition-duration: 0.3s;
+  opacity: 0.6;
+}
+
+.item.show {
+  display: block;
+  transition-duration: 0.4s;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 999px) {
+  .next, .prev {
+      transform: scale(1);
+      opacity: 1;
+  }
+
+  .item {
+      display: block !important;
+  }
+}
+.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled{
+  display: block !important;
+}
