@@ -164,6 +164,7 @@ function llenarHTMLComentariosActual(htmlAInsertar, json,) {
                 </div>
               <h6 class="mb-3 mt-2">${propierties.nombre}</h6>
               <p class="content mb-5 mx-2">"${propierties.comentario}"</p>
+              <span>⭐⭐⭐⭐⭐</span>
               </div>
             `
             break
