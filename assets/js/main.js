@@ -125,8 +125,13 @@ obtenerJSON("https://api.jsonbin.io/v3/b/6391fd7c6a51bc4f704a819b")
                     ${propierties.marca}
                 </h3>
                 <p class="popular_description">
+                <img src="assets/img/batteriepng.png"
+                width="35px" height="25px">
                     ${propierties.descripcion}
                 </p>
+                <a href="javascript:ventanaSecundaria('https://api.whatsapp.com/send?phone=+5491169761257&text=Hola!%20Te%20consulto%20por%20una%20bateria?%20seria%20la%20${propierties.descripcion}')">
+                <button type="button" class="btn btn-danger btn-block"><small>CONTACTAR</small></button>
+              </a>
             </div>
         </article>
         `
