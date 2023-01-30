@@ -107,25 +107,25 @@ function llenarHTML(htmlAInsertar,json){
   htmlAInsertar = ""
   for (let propierties of json) {
     htmlAInsertar += `
-    <article class="popular__card swiper-slide">
-    <img class ="popular__img" src="${propierties.imagen}" alt="">
-    <div class="popular__data">
-        <h2 class="popular__price">
-            <span>$</span>${propierties.precio}
-        </h2>
-        <h3 class="popular__title">
-            ${propierties.marca}
-        </h3>
-        <p class="popular_description">
-        <img src="assets/img/batteriepng.png"
-        width="35px" height="25px">
-            ${propierties.descripcion}
-        </p>
-        <a href="javascript:ventanaSecundaria('https://api.whatsapp.com/send?phone=+5491169761257&text=Hola!%20Te%20consulto%20por%20una%20bateria?%20seria%20la%20${propierties.descripcion}')">
-        <button type="button" class="btn btn-danger btn-block"><small>CONTACTAR</small></button>
-      </a>
-    </div>
-</article>
+       <article class="popular__card swiper-slide">
+            <img class ="popular__img" src="${propierties.imagen}" alt="">
+            <div class="popular__data">
+                <h2 class="popular__price">
+                    <span>$</span>${propierties.precio}
+                </h2>
+                <h3 class="popular__title">
+                    ${propierties.marca}
+                </h3>
+                <p class="popular_description">
+                <img src="assets/img/batteriepng.png"
+                width="35px" height="25px">
+                    ${propierties.descripcion}
+                </p>
+                <a href="javascript:ventanaSecundaria('https://api.whatsapp.com/send?phone=+5491169761257&text=Hola!%20Te%20consulto%20por%20una%20bateria?%20seria%20la%20${propierties.descripcion}')">
+                <button type="button" class="btn btn-danger btn-block"><small>CONTACTAR</small></button>
+              </a>
+            </div>
+        </article>
     `
   }
   return htmlAInsertar

@@ -366,6 +366,9 @@ button {
   border-radius: 1rem;
   margin: 0 auto;
   transition: .4s;
+  margin-bottom: 10px !important;
+  -webkit-box-shadow: 0px 0px 29px -4px #000000; 
+  box-shadow: 0px 0px 29px -4px #000000;
 }
 
 .popular__img{
@@ -456,7 +459,7 @@ button {
   position: absolute;
   width: 340px;
   height: 400px;
-  overflow: hidden;
+  /* overflow: hidden; */
   border-radius: 125px 125px 12px 12px;
   inset: 0;
   margin: auto;
@@ -827,7 +830,7 @@ button {
   .section{
     padding: 3.5rem 0 1rem;
   }
-
+  
   .home{
     padding-bottom: 0;
   }
@@ -836,6 +839,12 @@ button {
     grid-template-columns: repeat(1,180px);
     justify-content: center;
   }
+}
+
+@media screen and (max-width: 500px) {
+ .popular__card{
+  width: 366px !important;
+ }
 }
 
 @media screen and (max-width: 320px) {
@@ -915,7 +924,7 @@ button {
     grid-template-columns: repeat(2,1fr);
     padding-top: 2rem;
   }
-
+ 
   .home__orbe{
     align-self: flex-end;
   }

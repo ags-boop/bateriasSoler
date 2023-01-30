@@ -11,7 +11,7 @@ window.addEventListener('scroll', scrollHeader)
 
 /*=============== SWIPER POPULAR ===============*/
 var swiper = new Swiper(".popular__container", {
-  spaceBetween: 32,
+  spaceBetween: 35,
   grabCursor: true,
   centeredSlides: true,
   slidePerView: 'auto',
@@ -220,14 +220,14 @@ obtenerJSON("https://api.jsonbin.io/v3/b/63d571faebd26539d06a4b5f")
     //console.log("el json de respuesta es:", json.record.baterias);
     var arrayFilter = json.record.comentarios
     console.log(arrayFilter)
-    htmlComentariosPrevio = llenarHTMLComentariosPrevio(htmlComentariosPrevio, arrayFilter)
+    // htmlComentariosPrevio = llenarHTMLComentariosPrevio(htmlComentariosPrevio, arrayFilter)
     htmlComentariosActual = llenarHTMLComentariosActual(htmlComentariosActual,arrayFilter)
-    htmlComentariosSiguiente =  llenarHTMLComentariosSiguiente(htmlComentariosSiguiente,arrayFilter)
+    // htmlComentariosSiguiente =  llenarHTMLComentariosSiguiente(htmlComentariosSiguiente,arrayFilter)
 
     // console.log(htmlComentarios)
-    iDivInsertComentariosPrevio.innerHTML = htmlComentariosPrevio
+    // iDivInsertComentariosPrevio.innerHTML = htmlComentariosPrevio
     iDivInsertComentarioActual.innerHTML = htmlComentariosActual
-    iDivInsertComentarioSiguiente.innerHTML = htmlComentariosSiguiente
+    // iDivInsertComentarioSiguiente.innerHTML = htmlComentariosSiguiente
   })
   .catch((err) => {
     console.log("Error encontrado:", err);
