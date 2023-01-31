@@ -114,7 +114,7 @@ button {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1024px;
-  margin-left: 1.5rem;
+  /* margin-left: 1.5rem; */
   margin-right: 1.5rem;
 }
 
@@ -564,7 +564,7 @@ button {
   width: 266px;
   height: 316px;
   background-color: black;
-  border-radius: 135px 135px 16px 16px;
+  /* border-radius: 135px 135px 16px 16px; */
 }
 
 .contact__img{
@@ -841,9 +841,9 @@ button {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
  .popular__card{
-  width: 366px !important;
+  width: 100% !important;
  }
 }
 

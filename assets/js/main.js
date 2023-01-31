@@ -16,6 +16,7 @@ var swiper = new Swiper(".popular__container", {
   centeredSlides: true,
   slidePerView: 'auto',
   loop: true,
+  centeredSlides:true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
