@@ -361,6 +361,7 @@ button {
 
 .popular__card{
   width: 290px!important;
+  height: auto;
   background-color: var(--container-color);
   padding: .5rem .5rem 1.5rem!important;
   border-radius: 1rem;
@@ -563,19 +564,22 @@ button {
 .contact__orber{
   width: 266px;
   height: 316px;
-  background-color: black;
+  /* background-color: black; */
   /* border-radius: 135px 135px 16px 16px; */
 }
 
 .contact__img{
   position: absolute;
-  width: 250px;
+  display: flex;
+  justify-content: center;
+  top: 120px !important;
+  /* width: 250px; */
   height: 300px;
-  overflow:hidden;
+  /* overflow:hidden; */
   border-radius: 125px 125px 12px 12px;
   inset: 0;
   margin: auto;
-  box-shadow: 0 16px 32px hsla(228,66%,25%,.25);
+  /* box-shadow: 0 16px 32px hsla(228,66%,25%,.25); */
 }
 
 .contact__description{
