@@ -8,7 +8,12 @@ function ventanaSecundaria(URL) {
 
 function obtenerJSON(url) {
   return new Promise((resolve, reject) => {
-    fetch(url)
+    fetch(url,{
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Master-Key': '$2b$10$OUBjLRQYYpa3cTlEbeSUY.SQUYM73UoNSO9S3v.CQaLJq2h9qwo9K'
+      },
+    })
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -24,8 +29,9 @@ function obtenerJSON(url) {
 }
 
 
-obtenerJSON("https://api.jsonbin.io/v3/b/63b9717215ab31599e2fd923")
+obtenerJSON("https://api.jsonbin.io/v3/b/64454a088e4aa6225e8f5935")
 .then((json) => {
+  console.log(json)
   var arrayFilter = json.record.baterias
   console.log(arrayFilter)
   htmlProductos = llenarHTML(htmlProductos,arrayFilter)
@@ -76,7 +82,7 @@ window.addEventListener('scroll', scrollUp)
 
 function filterByMarca(marca) {
   if (marca != null){
-    obtenerJSON("https://api.jsonbin.io/v3/b/63b9717215ab31599e2fd923")
+    obtenerJSON("https://api.jsonbin.io/v3/b/64454a088e4aa6225e8f5935")
     .then((json) => {
       var arrayFilter = json.record.baterias.filter(function (entry) {
         return entry.marca === marca;
@@ -89,7 +95,7 @@ function filterByMarca(marca) {
       console.log("Error encontrado:", err);
     });}
     else{
-      obtenerJSON("https://api.jsonbin.io/v3/b/63b9717215ab31599e2fd923")
+      obtenerJSON("https://api.jsonbin.io/v3/b/64454a088e4aa6225e8f5935")
       .then((json) => {
         var arrayFilter = json.record.baterias
         console.log(arrayFilter)

@@ -92,7 +92,12 @@ var idivComentarioGlobal = document.getElementById('global')
 
 function obtenerJSON(url) {
   return new Promise((resolve, reject) => {
-    fetch(url)
+    fetch(url,{
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Master-Key': '$2b$10$OUBjLRQYYpa3cTlEbeSUY.SQUYM73UoNSO9S3v.CQaLJq2h9qwo9K'
+      },
+    })
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -111,10 +116,13 @@ function obtenerJSON(url) {
 
 var html = ""
 
-obtenerJSON("https://api.jsonbin.io/v3/b/6391fd7c6a51bc4f704a819b")
+obtenerJSON("https://api.jsonbin.io/v3/b/64454a088e4aa6225e8f5935")
   .then((json) => {
+    var arrayFilter = json.record.baterias.filter(function (entry) {
+      return entry.especial === "1";
+    });
     //console.log("el json de respuesta es:", json.record.baterias);
-    for (let propierties of json.record.baterias) {
+    for (let propierties of arrayFilter) {
       html += `
         <article class="popular__card swiper-slide">
             <img class ="popular__img" src="${propierties.imagen}" alt="">
