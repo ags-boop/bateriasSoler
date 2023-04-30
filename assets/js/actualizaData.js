@@ -12,7 +12,7 @@ const BateriaObj = {
 
 req.onreadystatechange = () => {
   if (req.readyState == XMLHttpRequest.DONE) {
-    console.log(req.responseText);
+    //console.log(req.responseText);
   }
 };
 
@@ -22,7 +22,7 @@ function actualizar(json) {
   req.setRequestHeader("Content-Type", "application/json");
   req.setRequestHeader("X-Master-Key", "$2b$10$OUBjLRQYYpa3cTlEbeSUY.SQUYM73UoNSO9S3v.CQaLJq2h9qwo9K");
   req.send(json);
-  console.log(req.response)
+  //console.log(req.response)
 }
 
 
@@ -40,7 +40,6 @@ function getSheetData() {
   fetch(url)
     .then(response => response.json())
     .then(data => {
-      console.log(data.values)
       buildJson(data.values)
     })
     .catch(error => {
@@ -89,7 +88,6 @@ function buildJson(data) {
       ]
   };
 
-  console.log(JSON.stringify(json));
   actualizar(JSON.stringify(json))
  
 }

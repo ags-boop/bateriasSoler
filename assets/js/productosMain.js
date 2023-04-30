@@ -31,9 +31,7 @@ function obtenerJSON(url) {
 
 obtenerJSON("https://api.jsonbin.io/v3/b/64454a088e4aa6225e8f5935")
 .then((json) => {
-  console.log(json)
   var arrayFilter = json.record.baterias
-  console.log(arrayFilter)
   htmlProductos = llenarHTML(htmlProductos,arrayFilter)
   divinsertproductos.innerHTML = htmlProductos
 })
@@ -87,7 +85,6 @@ function filterByMarca(marca) {
       var arrayFilter = json.record.baterias.filter(function (entry) {
         return entry.marca === marca;
       });
-      console.log(arrayFilter)
       htmlProductos = llenarHTML(htmlProductos,arrayFilter)
       divinsertproductos.innerHTML = htmlProductos
     })
@@ -98,7 +95,6 @@ function filterByMarca(marca) {
       obtenerJSON("https://api.jsonbin.io/v3/b/64454a088e4aa6225e8f5935")
       .then((json) => {
         var arrayFilter = json.record.baterias
-        console.log(arrayFilter)
         htmlProductos = llenarHTML(htmlProductos,arrayFilter)
         divinsertproductos.innerHTML = htmlProductos
       })
@@ -127,7 +123,7 @@ function llenarHTML(htmlAInsertar,json){
                 width="35px" height="25px">
                     ${propierties.descripcion}
                 </p>
-                <a href="javascript:ventanaSecundaria('https://api.whatsapp.com/send?phone=+5491169761257&text=Hola!%20Te%20consulto%20por%20una%20bateria?%20seria%20la%20${propierties.descripcion}')">
+                <a href="https://api.whatsapp.com/send?phone=+5491169761257&text=Hola!%20Te%20consulto%20por%20una%20bateria?%20seria%20la%20${propierties.descripcion}">
                 <button type="button" class="btn btn-danger btn-block"><small>CONTACTAR</small></button>
               </a>
             </div>

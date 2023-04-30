@@ -124,7 +124,6 @@ obtenerJSON("https://api.jsonbin.io/v3/b/64454a088e4aa6225e8f5935")
     arrayFilter.sort((a, b) => {
       return a.orden - b.orden;
     });
-    console.log(arrayFilter)
     //console.log("el json de respuesta es:", json.record.baterias);
     for (let propierties of arrayFilter) {
       html += `
@@ -233,7 +232,6 @@ obtenerJSON("https://api.jsonbin.io/v3/b/63d571faebd26539d06a4b5f")
   .then((json) => {
     //console.log("el json de respuesta es:", json.record.baterias);
     var arrayFilter = json.record.comentarios
-    console.log(arrayFilter)
     // htmlComentariosPrevio = llenarHTMLComentariosPrevio(htmlComentariosPrevio, arrayFilter)
     htmlComentariosActual = llenarHTMLComentariosActual(htmlComentariosActual,arrayFilter)
     // htmlComentariosSiguiente =  llenarHTMLComentariosSiguiente(htmlComentariosSiguiente,arrayFilter)
