@@ -121,6 +121,10 @@ obtenerJSON("https://api.jsonbin.io/v3/b/64454a088e4aa6225e8f5935")
     var arrayFilter = json.record.baterias.filter(function (entry) {
       return entry.especial === "1";
     });
+    arrayFilter.sort((a, b) => {
+      return a.orden - b.orden;
+    });
+    console.log(arrayFilter)
     //console.log("el json de respuesta es:", json.record.baterias);
     for (let propierties of arrayFilter) {
       html += `

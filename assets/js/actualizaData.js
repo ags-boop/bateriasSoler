@@ -6,7 +6,8 @@ const BateriaObj = {
   imagen: "",
   marca: "",
   precio: "",
-  especial:""
+  especial:"",
+  orden:""
 };
 
 req.onreadystatechange = () => {
@@ -79,6 +80,7 @@ function buildJson(data) {
     BateriaObj.marca = jsonArr[i][2]
     BateriaObj.precio = jsonArr[i][3]
     BateriaObj.especial = jsonArr[i][4]
+    BateriaObj.orden = jsonArr[i][5]
     newJsonArr.push({...BateriaObj})
   }  
   let json = {
