@@ -123,7 +123,7 @@ function llenarHTML(htmlAInsertar,json){
                 width="35px" height="25px">
                     ${propierties.descripcion}
                 </p>
-                <a href="https://api.whatsapp.com/send?phone=+5491169761257&text=Hola!%20Te%20consulto%20por%20una%20bateria?%20seria%20la%20${propierties.descripcion}">
+                <a href="javascript:ventanaSecundaria('https://api.whatsapp.com/send?phone=+5491169761257&text=Hola!%20Te%20consulto%20por%20una%20bateria?%20seria%20la%20${propierties.descripcion}')">
                 <button type="button" class="btn btn-danger btn-block"><small>CONTACTAR</small></button>
               </a>
             </div>
