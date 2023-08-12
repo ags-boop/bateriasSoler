@@ -61,9 +61,12 @@
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav__logo">
-                Baterias Soler <i class='bx bxs-home-alt-2'></i>
+                <a class="navbar-brand" href="#">
+                    <span style="color:white;" id="spannavbar">Baterias Soler</span>
+                    <img src="assets/img/LogoPng.png" alt="Logotipo" width="40" height="40" class="d-inline-block align-top">
+                </a>
             </a>
-            <a href="https://api.whatsapp.com/send?phone=+5491169761257&text=Hola!%20necesito%20ayuda" class="btn-wsp"
+            <a href="https://api.whatsapp.com/send?phone=+5491169761257&text=Hola!%20necesito%20ayuda" class="btn-wsp" id="wpboton"
                 target="_blank">
                 <i class="fa fa-whatsapp icono"></i>
             </a>
@@ -97,6 +100,13 @@
                         </a>
                     </li>
 
+                    <li class="nav__item" id="wpnavbar">
+                        <a href="#contact" class="nav__link active-linkWp">
+                            <i class='bx bxl-whatsapp'></i>
+                            <span>WhatsApp</span>
+                        </a>
+                    </li>
+
                 </ul>
             </div>
             <a href="#" class="button nav__button" onclick="location.href='productos.html'">
@@ -113,12 +123,24 @@
                     <h1 class="home__title">
                         Baterias Soler
                     </h1>
+
+                    <h4 style="color: white;">
+                        BATERÍAS A DOMICLIO EN MENOS DE 1 HORA
+                    </h4>
+                    <h5 style="color: white;">
+                       Envío Gratis, instalación sin cargo en 15 minutos.
+                    </h5>
                     <p class="home__description">
-                        Somos una empresa con <span style="color: red;">7</span> años en el rubro brindamos <span
-                            style="color: red;">seguridad</span> y <span style="color: red;">confianza</span> respaldada
-                        por nuestros clientes. Somos distribuidores de Moura, Willard, Bosch y Heliar.
+                        Somos distribuidores de Moura, Willard, Bosch y Heliar. Llegamos a tu zona en menos de una <span style="color: red;">HORA</span>
+                        Sucursales Saavedra y en Mataderos
                     </p>
-                    <!-- maybeinputsearch -->
+
+                    <div class="home__data">
+                        <a href="https://api.whatsapp.com/send?phone=+5491169761257&text=Hola%20quiero%20mi%20Bateria!"">
+                            <button type="button" class="btn btn-success">PEDI TU BATERÍA POR WHASTAPP AHORA !</button>
+                        </a>
+                    </div>
+                    <br>    
 
                     <div class="home__value">
                         <div>
@@ -152,18 +174,8 @@
                 <div class="home__images">
                     <div class="home__orbe">
                         <div class="home__img">
-                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active" data-bs-interval="2000">
-                                        <img src="assets/img/local.jpg" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item" data-bs-interval="2000">
-                                        <img src="assets/img/nextslide.jpg" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item" data-bs-interval="2000">
-                                        <img src="assets/img/thirdslide.jpg" class="d-block w-100" alt="...">
-                                    </div>
-                                </div>
+                            <div class="carousel-item active" data-bs-interval="2000">
+                                <img src="assets/img/local.jpg" class="d-block w-100" alt="...">
                             </div>
                         </div>
                     </div>
@@ -172,8 +184,9 @@
             </div>
         </section>
 
+
         <!--==================== LOGOS ====================-->
-        <section class="logos section">
+        <!-- <section class="logos section">
             <div class="logos__container container grid">
                 <div class="logos__img">
                     <img src="assets/img/descarga.png" alt="">
@@ -191,6 +204,21 @@
                     <img src="assets/img/willard.png" alt="">
                 </div>
 
+            </div>
+        </section> -->
+
+        <section class="logos section">
+            <div class="logos__container">
+                <h3 style="text-align: center;">
+                    La batería de tu auto entregada e instalada en 1 hora con
+                    envío y colocación gratis.
+                </h3>
+            </div>
+            <br>
+            <div style="text-align: center;">
+                <a href="https://api.whatsapp.com/send?phone=+5491169761257&text=Hola%20quiero%20mi%20Bateria!"">
+                    <button type="button" class="btn btn-success">¡Pedila por WhatsApp Ahora 011 6976-1257!</button>
+                </a>
             </div>
         </section>
 
@@ -233,7 +261,7 @@
                             Nuestros valores
                         </span>
                         <h2 class="section__title">
-                            Que es lo que nos destaca?
+                            ¿Qué es lo que nos destaca?
                         </h2>
                         <p class="value__description">
                             Rapidez, Confiabilidad, Amabilidad, Calidad
@@ -341,10 +369,9 @@
                     <div class="contact__data">
                         <span class="section__subtitle">Contactanos</span>
                         <h2 class="section__title">
-                            Por donde nos podes encontrar?<span>.</span>
+                            ¿Por dónde nos podés encontrar?<span>.</span>
                         </h2>
-                        <p class="contact__description">Te facilitamos los siguentes lugares para que puedas contactarte
-                            con nosotros</p>
+                        <p class="contact__description">Te facilitamos los siguientes lugares para que puedas contactarte con nosotros</p>
                     </div>
 
                     <div class="contact__card">
@@ -356,7 +383,7 @@
                                         Llamada
                                     </h3>
                                     <p class="contact__card-description">
-                                        Apreta "Llamar" y contactate con nosotros
+                                        Apretá "llamar" y contáctate con nosotros
                                     </p>
                                 </div>
                             </div>
@@ -374,7 +401,7 @@
                                         Mensaje
                                     </h3>
                                     <p class="contact__card-description">
-                                        Apreta "Mensaje" y contactate con nosotros
+                                        Apretá "Mensaje" y contactate con nosotros
                                     </p>
                                 </div>
                             </div>
@@ -392,10 +419,10 @@
                                 <i class='bx bxs-directions'></i>
                                 <div>
                                     <h3 class="contact__card-title">
-                                        Veni a visitarnos
+                                        Vení a visitarnos
                                     </h3>
                                     <p class="contact__card-description">
-                                        Si apretas "Ir" te decimos donde estamos.
+                                        Si apretás "ir", te decimos dónde estamos
                                     </p>
                                 </div>
                             </div>
@@ -419,7 +446,7 @@
                                 Encontranos en Sucursal Mataderos
                             </h1>
                             <p class="subscribe__description">
-                                Dale click y te llevamos !
+                                ¡Dale click y te llevamos!
                             </p>
                             <a class="button subscribe__button" href="javascript:ventanaSecundaria('https://goo.gl/maps/z7NM63jnkMYsJvms9')">
                                 Ir
@@ -432,7 +459,7 @@
                                 Encontranos en Sucursal Saavedra
                             </h1>
                             <p class="subscribe__description">
-                                Dale click y te llevamos !
+                                ¡Dale click y te llevamos !
                             </p>
                             <a class="button subscribe__button" href="javascript:ventanaSecundaria('https://goo.gl/maps/ZtcpjPfdFEW4gKx96')">
                                 Ir
@@ -447,10 +474,10 @@
         <section class="subscribe section">
             <div class="subscribe__container container">
                 <h1 class="subscribe__title">
-                    Queres conocer todo nuestro catalogo de baterias?
+                    ¿Queres conocer todo nuestro catálogo de baterías?
                 </h1>
                 <p class="subscribe__description">
-                    No pierdas mas tiempo, aca tenes todo lo que buscas
+                    No pierdas más tiempo, acá tenés todo lo que buscas
                 </p>
                 <a class="button subscribe__button" onclick="location.href='productos.html'">
                     Ver Productos
@@ -479,8 +506,15 @@
                   </div>
             </div>
 
-            <div class="item show" id="iDivInsertComentarioActual">
-               
+            <div class="item show" id="iDivInsertComentariosPrevio">
+                <div class="card border-0 py-3 px-4">
+                    <div class="row justify-content-center">
+                      <img src="assets/img/unnamed.png" class="img-fluid profile-pic mb-4 mt-3">
+                    </div>
+                  <h6 class="mb-3 mt-2">Luis Buchhammer</h6>
+                  <p class="content mb-5 mx-2">"Muy buena vinieron rapido y me cambiaron la batería"</p>
+                  <span>⭐⭐⭐⭐⭐</span>
+                  </div>
             </div>
             
             <div class="item next">

@@ -1,10 +1,19 @@
 /*=============== CHANGE BACKGROUND HEADER ===============*/
+const whatsapp = document.getElementById('wpboton')
+const whatsappnavbar = document.getElementById('wpnavbar')
+
 function scrollHeader() {
   const header = document.getElementById('header')
+  const spanNavBar = document.getElementById('spannavbar')
   if (this.scrollY >= 50) {
     header.classList.add('scroll-header')
+    spanNavBar.classList.remove('spannavbar')
+    spanNavBar.classList.add('spannavbarScroll')
   } else {
     header.classList.remove('scroll-header')
+    spanNavBar.classList.remove('spannavbarScroll')
+    spanNavBar.classList.add('spannavbar')
+
   }
 }
 window.addEventListener('scroll', scrollHeader)
@@ -400,3 +409,16 @@ obtenerJSON("https://api.jsonbin.io/v3/b/63d571faebd26539d06a4b5f")
   });
 
   obtenerDataFiltrada()
+
+
+  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+  // Mostrar los valores en el documento
+if (screenWidth >= 1023){
+  console.log(screenWidth)
+  whatsappnavbar.remove()
+}else
+{
+  console.log(screenWidth)
+  whatsapp.remove()
+}
