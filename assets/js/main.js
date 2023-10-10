@@ -34,7 +34,7 @@ var htmlProductos = ""
 function obtenerDataFiltrada(marca) {
   var jsonAFiltrar
   var responseOK = new Boolean(false);
-  const sheetId = "1uPxCQ6GTkwK2IQHaA_G3n9xuQaid4be6SCKG08zYyXk";
+  const sheetId = "1L2U5w5ldAgEjVMfuAoEnZsnFsLNZTqh5fuLH_y7qYR4";
   const apiKey = "AIzaSyA9hpVGy4uzlhess_WZ8zZ1K9HKklQfYK0";
   const range = "PreciosProductos!2:1000"; // Rango de celdas que se desea obtener
   
@@ -300,46 +300,46 @@ function llenarHTMLComentariosPrevio(htmlAInsertar, json,) {
   return htmlAInsertar
 }
 
-function obtenerJSON(url) {
-  return new Promise((resolve, reject) => {
-    fetch(url,{
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Master-Key': '$2b$10$OUBjLRQYYpa3cTlEbeSUY.SQUYM73UoNSO9S3v.CQaLJq2h9qwo9K'
-      },
-    })
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        }
-        reject(
-          "No hemos podido recuperar ese json. El código de respuesta del servidor es: " +
-          response.status
-        );
-      })
-      .then((json) => resolve(json))
-      .catch((err) => reject(err));
-  });
-}
+// function obtenerJSON(url) {
+//   return new Promise((resolve, reject) => {
+//     fetch(url,{
+//       headers: {
+//         'Content-Type': 'application/json',
+//         'X-Master-Key': '$2b$10$OUBjLRQYYpa3cTlEbeSUY.SQUYM73UoNSO9S3v.CQaLJq2h9qwo9K'
+//       },
+//     })
+//       .then((response) => {
+//         if (response.ok) {
+//           return response.json();
+//         }
+//         reject(
+//           "No hemos podido recuperar ese json. El código de respuesta del servidor es: " +
+//           response.status
+//         );
+//       })
+//       .then((json) => resolve(json))
+//       .catch((err) => reject(err));
+//   });
+// }
 
 
 
-obtenerJSON("https://api.jsonbin.io/v3/b/63d571faebd26539d06a4b5f")
-  .then((json) => {
-    //console.log("el json de respuesta es:", json.record.baterias);
-    var arrayFilter = json.record.comentarios
-    // htmlComentariosPrevio = llenarHTMLComentariosPrevio(htmlComentariosPrevio, arrayFilter)
-    htmlComentariosActual = llenarHTMLComentariosActual(htmlComentariosActual,arrayFilter)
-    // htmlComentariosSiguiente =  llenarHTMLComentariosSiguiente(htmlComentariosSiguiente,arrayFilter)
+// obtenerJSON("https://api.jsonbin.io/v3/b/63d571faebd26539d06a4b5f")
+//   .then((json) => {
+//     //console.log("el json de respuesta es:", json.record.baterias);
+//     var arrayFilter = json.record.comentarios
+//     // htmlComentariosPrevio = llenarHTMLComentariosPrevio(htmlComentariosPrevio, arrayFilter)
+//     htmlComentariosActual = llenarHTMLComentariosActual(htmlComentariosActual,arrayFilter)
+//     // htmlComentariosSiguiente =  llenarHTMLComentariosSiguiente(htmlComentariosSiguiente,arrayFilter)
 
-    // console.log(htmlComentarios)
-    // iDivInsertComentariosPrevio.innerHTML = htmlComentariosPrevio
-    iDivInsertComentarioActual.innerHTML = htmlComentariosActual
-    // iDivInsertComentarioSiguiente.innerHTML = htmlComentariosSiguiente
-  })
-  .catch((err) => {
-    console.log("Error encontrado:", err);
-  });
+//     // console.log(htmlComentarios)
+//     // iDivInsertComentariosPrevio.innerHTML = htmlComentariosPrevio
+//     iDivInsertComentarioActual.innerHTML = htmlComentariosActual
+//     // iDivInsertComentarioSiguiente.innerHTML = htmlComentariosSiguiente
+//   })
+//   .catch((err) => {
+//     console.log("Error encontrado:", err);
+//   });
 
 
   $(document).ready(function () {

@@ -18,7 +18,7 @@ function ventanaSecundaria(URL) {
 function getSheetData() {
   var jsonADevolver
   var responseOK = new Boolean(false);
-  const sheetId = "1uPxCQ6GTkwK2IQHaA_G3n9xuQaid4be6SCKG08zYyXk";
+  const sheetId = "1L2U5w5ldAgEjVMfuAoEnZsnFsLNZTqh5fuLH_y7qYR4";
   const apiKey = "AIzaSyA9hpVGy4uzlhess_WZ8zZ1K9HKklQfYK0";
   const range = "PreciosProductos!2:1000"; // Rango de celdas que se desea obtener
   
@@ -44,7 +44,7 @@ function getSheetData() {
  function obtenerDataFiltrada(marca) {
   var jsonAFiltrar
   var responseOK = new Boolean(false);
-  const sheetId = "1uPxCQ6GTkwK2IQHaA_G3n9xuQaid4be6SCKG08zYyXk";
+  const sheetId = "1L2U5w5ldAgEjVMfuAoEnZsnFsLNZTqh5fuLH_y7qYR4";
   const apiKey = "AIzaSyA9hpVGy4uzlhess_WZ8zZ1K9HKklQfYK0";
   const range = "PreciosProductos!2:1000"; // Rango de celdas que se desea obtener
   
